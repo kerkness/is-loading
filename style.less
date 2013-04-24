@@ -8,6 +8,19 @@
 }
 
 
+//.box-shadow(5px, 5px, 6px, #FF5566, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @color: #000000, @alpha: 0.5) {
+    -webkit-box-shadow: @x @y @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    -moz-box-shadow: @x @y @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    box-shadow: @x @y @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @spread: 0px, @color: #000000, @alpha: 0.5) {
+    -webkit-box-shadow: @x @y @spread @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    -moz-box-shadow: @x @y @spread @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    box-shadow: @x @y @spread @blur hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+
 @link: #66aacc;
 
 // Website CSS
