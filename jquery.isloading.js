@@ -91,6 +91,11 @@
             tpl = tpl.replace( '%class%', self.options['class'] );
             tpl = tpl.replace( '%text%', ( self.options.text !== "" ) ? self.options.text + ' ' : '' );
             self._loader = $( tpl );
+
+            // Set the data-isloading-label
+            if( self.options.text !== "" ){
+                $(self.element).attr('data-isloading-label', self.options.text );
+            }
             
             // Disable the element
             if( $( self.element ).is( "input, textarea" ) && true === self.options.disableSource ) {
